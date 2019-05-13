@@ -9,11 +9,11 @@
 
 ### 数据统一返回格式（仅成功时data有数据，具体data，自己请求获取）
 1. 成功(page,limit,all_count仅在获取列表时会返回)
-```{ code: 200, data: [{},{}], msg: "***", page: 1, limit: 10, all_count: 11 }
-```
+``{ code: 200, data: [{},{}], msg: "***", page: 1, limit: 10, all_count: 11 }
+``
 2. 失败
-```{ code: 500, data: [], msg: "***" }
-```
+``{ code: 500, data: [], msg: "***" }
+``
 
 ### 1. 获取回复列表
 ###### 接口：modules/getMessage.php

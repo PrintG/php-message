@@ -23,6 +23,7 @@
 				"name" => $name,
 				"content" => substr($content,0,$maxLength),
 				"audit" => "0",
+				"ctime" => time(),
 			]);
 			
 			$main->setJson("message","data",$data_msg);

@@ -8,10 +8,10 @@
 ## 二. 接口说明(数据均为form表单形式)
 
 ### 数据统一返回格式（仅成功时data有数据，具体data，自己请求获取）
-1. 成功(page,limit,all_count仅在获取列表时会返回)
+1. 成功(page,limit,all_count仅在获取列表时会返回)<br>
 ``{ code: 200, data: [{},{}], msg: "***", page: 1, limit: 10, all_count: 11 }
 ``
-2. 失败
+2. 失败<br>
 ``{ code: 500, data: [], msg: "***" }
 ``
 

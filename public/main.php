@@ -67,7 +67,7 @@
 		// $module => 文件夹名(会自动获取该文件夹下的data.json)
 		// $name => json文件名,默认 data (可选参数)
 		// $data => json数据
-		function setJson($module,$name,$data = []){
+		public function setJson($module,$name,$data = []){
 	        $json_strings = json_encode($data, JSON_UNESCAPED_UNICODE);
 	        file_put_contents("../data/{$module}/{$name}.json",$json_strings); //写入
 

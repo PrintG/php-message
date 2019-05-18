@@ -22,6 +22,15 @@
 	$status = $main->getRequest("status");
 	$page = $main->getRequest("page");
 	$limit = $main->getRequest("limit");
+	
+	echo $page;echo $limit;
+	
+	if(!$page){
+		$page = 1;
+	}
+	if(!$limit){
+		$limit = 10;
+	}
 
 	// 获取的数据
 	$data_msg = $main->getJson("message","data");
@@ -57,15 +66,15 @@
 		global $limit;
 
 		$pagedata = [];
-
+		
 		foreach( $data as $k => $v ){
-			if( ($k - 1) % $limit == 0){
+			if( ($k+1) % $limit == 0){
 				array_push($pagedata, array_slice($data,$k,$limit));
 			}
 		}
-
+		
 		$curdata = $pagedata[ $curPage - 1 ];
-
+		
 		return [
 			"data" => $curdata,
 			"limit" => $limit,

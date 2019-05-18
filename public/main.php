@@ -68,11 +68,11 @@
 		// $name => json文件名,默认 data (可选参数)
 		// $data => json数据
 		public function setJson($module,$name,$data = []){
-	        $json_strings = json_encode($data, JSON_UNESCAPED_UNICODE);
-	        file_put_contents("../data/{$module}/{$name}.json",$json_strings); //写入
+				$json_strings = json_encode($data, JSON_UNESCAPED_UNICODE);
+				file_put_contents("../data/{$module}/{$name}.json",$json_strings); //写入
 
-	        return true;
-	    }
+				return true;
+		}
 	
 		// 获取表单传值, 当没有值时,会返回 false
 		// $field => 字段名
@@ -83,6 +83,8 @@
 				return false;
 			}
 		}
+		
+		
 	}
 
 ?>

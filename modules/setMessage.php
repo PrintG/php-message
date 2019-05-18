@@ -3,8 +3,10 @@
 	include('../public/main.php');
 
 	$main = new Main();
-
-	$maxLength = 300;	//最大300个字符
+	
+	//限制名称和内容长度
+	$maxNameLength = 50;	//最大50个字符
+	$maxContentLength = 300;	//最大300个字符
 
 
 	if(isset($_COOKIE["user"])){
@@ -20,8 +22,8 @@
 
 			array_push($data_msg, [
 				"id" => end($data_msg)?strval( end($data_msg)["id"]+1 ):"1",
-				"name" => $name,
-				"content" => substr($content,0,$maxLength),
+				"name" => substr($name,0,$maxNameLength),
+				"content" => substr($content,0,$maxContentLength),
 				"audit" => "0",
 				"ctime" => time(),
 			]);
